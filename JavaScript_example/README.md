@@ -8,4 +8,4 @@
 10 + 20 + 30 * 2
 'JavaScript'
 ```
-[자바스크립트를 이용한 메시지 출력](https://htmlpreview.github.io/?https://github.com/oceanfromthewave/html5/blob/master/helloworld/index.html)
+[자바스크립트를 이용한 메시지 출력](https://htmlpreview.github.io/?https://github.com/oceanfromthewave/html5/blob/master/JavaScript_example/output_alert.html)

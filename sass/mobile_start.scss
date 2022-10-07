@@ -1,14 +1,11 @@
 $primary-color: #222;
 
+@mixin center($color) {
+    color: $color;
+    text-align: center;
+}
 @mixin hidden {
     display: none;
-
-}
-
-@mixin centerWhite {
-    color: white;
-    text-align: center;
-    
 }
 
 * {
@@ -47,7 +44,7 @@ li {
         font-size: 20px;
         font-weight: normal;
         line-height: 27px;
-        color: #222;
+        color: $primary-color;
     }
 
     ul {
@@ -58,27 +55,25 @@ li {
     li {
         margin-top: 10px;
         margin-bottom: 10px;
-    }
 
-    li a {
-        color: #555;
+        a {
+            color: #555;
+        }
     }
 
     label {
-        text-align: center;
+        @include center($primary-color);
         float: right;
         width: 40px;
         height: 27px;
         line-height: 27px;
-        color: #222;
-        border: 1px solid #222;
+        border: 1px solid $primary-color;
         border-radius: 5px;
     }
 }
 
 #checkbox {
     @include hidden;
-
 }
 
 #checkbox+nav {
@@ -86,7 +81,7 @@ li {
 }
 
 #checkbox:checked+nav {
-    display: none;
+    @include hidden;
 }
 
 /* 본문과 푸터 구성 */
@@ -96,27 +91,26 @@ li {
 
     h1 {
         margin-bottom: 20px;
-        @include centerWhite;
         font-weight: 500;
+        @include center(white);
     }
 
     p {
-        color: #222;
-        @include centerWhite;
+        color: $primary-color;
+        @include center(white);
     }
 }
 
 #sub-content {
     padding-top: 30px;
 
-    h1 {
+    h1,
+    h2 {
         text-align: center;
         color: #333;
     }
 
     h2 {
-        text-align: center;
-        color: #333;
         font-size: 17px;
     }
 
@@ -131,15 +125,14 @@ li {
     }
 }
 
-
-
 #main-footer {
     padding-top: 40px;
 }
 
 footer {
     background: #323232;
+    color: white;
     font-size: 12px;
-    @include centerWhite;
+    text-align: center;
     line-height: 40px;
 }
